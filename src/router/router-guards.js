@@ -8,7 +8,10 @@ export function createRouterGuards(router) {
     router.beforeEach(async (to, from, next) => {
         const hasToken = getLocalItem(ACCESS_TOKEN_KEY);
         if (!hasToken) {
-            redirectSSO()
+            // redirectSSO()
+            next()
+        } else {
+            next()
         }
     })
 }

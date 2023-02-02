@@ -3,7 +3,6 @@ import PageNotFound from '@/pages/error/pageNotFound';
 const errRoute = [
     {
         path: '/error',
-        name: ERROR_ROUTE_NAME,
         redirect: '/error/404',
         children: [
             {
@@ -18,12 +17,10 @@ const errRoute = [
     },
     {
         path: '/:pathMatch(.*)*',
-        name: PAGE_NOT_FOUND_NAME,
         meta: {
             title: 'NotFound',
         },
         redirect: '/error/404',
-        children: [],
     }
 ]
 

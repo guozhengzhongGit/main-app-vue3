@@ -79,7 +79,12 @@ module.exports = {
             },
           },
         ]
-      }
+      },
+      {
+        // 默认 8kb
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset',
+      },
     ]
   },
   plugins: [
