@@ -7,9 +7,8 @@
     "prettier-format": "prettier --config prettier.config.js --write",
     "prepare": "husky install",
     "lint": "eslint --ext js,jsx,vue --fix",
-    "start": "cross-env NODE_ENV=development BUILD_TARGET=test webpack serve -c ./build/webpack.dev.config.js",
     "build": "cross-env NODE_ENV=production BUILD_TARGET=test node ./scripts/index.js",
-    "dev:test": "cross-env NODE_ENV=development BUILD_TARGET=test node ./scripts/index.js"
+    "start": "cross-env NODE_ENV=development BUILD_TARGET=test node ./scripts/index.js"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,vue,ts,tsx}": [
