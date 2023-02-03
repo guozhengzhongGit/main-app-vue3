@@ -4,8 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prettier-format": "prettier --config prettier.config.js --write",
+    "prepare": "husky install",
+    "lint": "eslint --ext js,jsx,vue --fix",
     "start": "cross-env NODE_ENV=development BUILD_TARGET=test webpack serve -c ./build/webpack.dev.config.js",
     "build": "cross-env NODE_ENV=production BUILD_TARGET=production webpack -c ./build/webpack.prod.config.js"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,vue,ts,tsx}": [
+      "npm run lint",
+      "git add ./"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -13,6 +22,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.13",
     "babel-loader": "^8.3.0",
+    "eslint": "^7.32.0",
     "postcss": "^8.4.21",
     "postcss-loader": "^7.0.2",
     "vant": "^4.0.9",
@@ -23,16 +33,29 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
+    "@babel/eslint-parser": "^7.19.1",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/plugin-proposal-decorators": "^7.20.13",
     "@babel/preset-env": "^7.20.2",
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "commitlint": "^17.4.2",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.3",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-spellcheck": "0.0.20",
+    "eslint-plugin-vue": "^9.9.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.3",
     "less": "^4.1.3",
     "less-loader": "^11.1.0",
+    "lint-staged": "^13.1.0",
     "mini-css-extract-plugin": "^2.7.2",
+    "modules-words": "^1.0.2",
     "postcss-px-to-viewport-8": "^1.1.2",
+    "prettier": "^2.8.3",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",

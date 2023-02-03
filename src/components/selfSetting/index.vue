@@ -1,13 +1,11 @@
 <template>
-<div class="outer">
-  组件
-  <Button type="primary">主要按钮</Button>
-  <Icon name="phone" />
-  <Icon name="phone-o" />
-  <div class="textvw">
-
+  <div class="outer">
+    组件
+    <Button type="primary">主要按钮</Button>
+    <Icon name="phone" />
+    <Icon name="phone-o" />
+    <div class="textvw"> </div>
   </div>
-</div>
 </template>
 
 <script setup>
