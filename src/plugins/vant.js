@@ -1,4 +1,12 @@
-import { Button, Icon, Dialog, ConfigProvider, Switch, Cell } from 'vant';
+import {
+  Button,
+  Icon,
+  Dialog,
+  ConfigProvider,
+  Switch,
+  Cell,
+  Badge
+} from 'vant';
 import 'vant/lib/index.css';
 export function registerVant(app) {
   app
@@ -7,5 +15,6 @@ export function registerVant(app) {
     .use(Dialog)
     .use(ConfigProvider)
     .use(Switch)
-    .use(Cell);
+    .use(Cell)
+    .use(Badge);
 }

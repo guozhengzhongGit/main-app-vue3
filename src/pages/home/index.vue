@@ -1,17 +1,10 @@
 <template>
-<div class="outer">
-  home 页面
-  <div class="content">
-    红色
+  <div class="outer">
+    <div class="logo">
+      <img src="@/assets/images/logo.svg" />
+    </div>
+    <SelfSetting />
   </div>
-  <div class="logo">
-    <img src="@/assets/images/logo.svg" />
-  </div>
-  <div class="outer_bg">
-
-  </div>
-  <SelfSetting />
-</div>
 </template>
 
 <script setup>
@@ -23,9 +16,8 @@ import SelfSetting from '@/components/selfSetting';
   font-size: 14px;
   color: cadetblue;
   .logo {
-    width: 100%;
-    transform: rotate(180deg);
-    transition: .3s transform;
+    width: 50%;
+    margin: 0 auto;
     img {
       display: block;
       width: 100%;
@@ -36,7 +28,7 @@ import SelfSetting from '@/components/selfSetting';
     color: red;
   }
   &_bg {
-    background: url("@/assets/images/title.jpg");
+    background: url('@/assets/images/title.jpg');
     background-size: cover;
     height: 50px;
   }

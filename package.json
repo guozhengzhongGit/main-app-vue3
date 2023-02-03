@@ -8,7 +8,8 @@
     "prepare": "husky install",
     "lint": "eslint --ext js,jsx,vue --fix",
     "start": "cross-env NODE_ENV=development BUILD_TARGET=test webpack serve -c ./build/webpack.dev.config.js",
-    "build": "cross-env NODE_ENV=production BUILD_TARGET=production webpack -c ./build/webpack.prod.config.js"
+    "build": "cross-env NODE_ENV=production BUILD_TARGET=test node ./scripts/index.js",
+    "dev:test": "cross-env NODE_ENV=development BUILD_TARGET=test node ./scripts/index.js"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,vue,ts,tsx}": [
@@ -22,6 +23,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.13",
     "babel-loader": "^8.3.0",
+    "chalk": "^4.1.2",
     "dayjs": "^1.11.7",
     "eslint": "^7.32.0",
     "pinia": "^2.0.30",
@@ -56,12 +58,14 @@
     "lint-staged": "^13.1.0",
     "mini-css-extract-plugin": "^2.7.2",
     "modules-words": "^1.0.2",
+    "portfinder": "^1.0.32",
     "postcss-px-to-viewport-8": "^1.1.2",
     "prettier": "^2.8.3",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.75.0",
-    "webpack-dev-server": "^4.11.1"
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0"
   }
 }
