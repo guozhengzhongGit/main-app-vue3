@@ -159,8 +159,6 @@ const webpackBaseConfig = {
   ]
 };
 
-console.log(styleRules);
-
 webpackBaseConfig.module.rules.push(...styleRules);
 
 module.exports = webpackBaseConfig;
