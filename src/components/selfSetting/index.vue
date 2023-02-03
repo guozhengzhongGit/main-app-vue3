@@ -4,6 +4,9 @@
   <Button type="primary">主要按钮</Button>
   <Icon name="phone" />
   <Icon name="phone-o" />
+  <div class="textvw">
+
+  </div>
 </div>
 </template>
 
@@ -14,5 +17,10 @@ import { Button, Icon } from 'vant';
 <style lang="scss" scoped>
 .outer {
   font-weight: bolder;
+  .textvw {
+    width: 200px;
+    background: red;
+    height: 100px;
+  }
 }
 </style>
