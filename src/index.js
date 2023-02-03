@@ -1,14 +1,15 @@
-
 import { createApp } from 'vue';
-import 'vant/lib/index.css';
 import App from './app.vue';
 import { registerRouter } from './router';
+import { registerVant } from './plugins';
+import { setUpStore } from './store';
 const app = createApp(App);
 
-
 async function setUpApp() {
-    await registerRouter(app);
-    app.mount('#app');
+  setUpStore(app);
+  registerVant(app);
+  await registerRouter(app);
+  app.mount('#app');
 }
 
 setUpApp();

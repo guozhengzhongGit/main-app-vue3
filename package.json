@@ -22,7 +22,9 @@
   "dependencies": {
     "autoprefixer": "^10.4.13",
     "babel-loader": "^8.3.0",
+    "dayjs": "^1.11.7",
     "eslint": "^7.32.0",
+    "pinia": "^2.0.30",
     "postcss": "^8.4.21",
     "postcss-loader": "^7.0.2",
     "vant": "^4.0.9",

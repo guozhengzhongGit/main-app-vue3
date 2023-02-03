@@ -1,0 +1,1 @@
+export { registerVant } from './vant';
