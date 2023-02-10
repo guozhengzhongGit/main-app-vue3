@@ -1,15 +1,13 @@
 <template>
   <div class="outer">
+    主应用
     <div class="logo">
       <img src="@/assets/images/logo.svg" />
     </div>
-    <SelfSetting />
   </div>
 </template>
 
-<script setup>
-import SelfSetting from '@/components/selfSetting';
-</script>
+<script setup></script>
 
 <style lang="less" scoped>
 .outer {

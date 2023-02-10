@@ -1,29 +1,15 @@
 <template>
-  <van-config-provider :theme="appStore.theme">
-    <div>
-      <van-cell center title="切换主题">
-        <template #right-icon>
-          <van-switch v-model="checked" @change="changeTheme" />
-        </template>
-      </van-cell>
-      <router-view></router-view>
-    </div>
-  </van-config-provider>
+  <div>
+    <router-link to="/vue3">vue3微应用</router-link>
+    <router-view></router-view>
+    <div id="vue3"></div>
+  </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { useAppStore } from '@/store/appStore';
-const appStore = useAppStore();
-console.log(appStore);
-const checked = ref(true);
-const changeTheme = (val) => {
-  appStore.theme = val ? 'light' : 'dark';
-};
+import { onMounted } from 'vue';
+import { setupQiankun } from './qiankun';
+onMounted(() => {
+  setupQiankun();
+});
 </script>
-<style>
-html,
-body {
-  width: 100%;
-}
-</style>

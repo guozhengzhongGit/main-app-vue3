@@ -9,6 +9,8 @@ module.exports = merge(baseConfig, {
   plugins: [new MiniCssExtractPlugin()],
   output: {
     path: path.join(projectDir, 'dist'),
-    filename: '[name].[contenthash:8].js'
+    publicPath: '/',
+    clean: true,
+    filename: 'assets/script/[name].[contenthash:8].js'
   }
 });

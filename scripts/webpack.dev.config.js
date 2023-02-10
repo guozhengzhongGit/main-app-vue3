@@ -7,7 +7,7 @@ const baseConfig = require('./webpack.base.config');
 
 const projectDir = process.cwd();
 const serverConfig = {
-  port: 6202,
+  port: 6200,
   client: {
     overlay: {
       errors: true,
@@ -23,18 +23,16 @@ const serverConfig = {
     publicPath: '/'
   },
   compress: true,
-  open: true,
+  open: false,
   proxy: {},
   hot: true
 };
-
-console.log(process.env.NODE_ENV);
-console.log(process.env.BUILD_TARGET);
 
 const webpackDevConfig = merge(baseConfig, {
   mode: 'development',
   output: {
     path: path.join(projectDir, 'dist'),
+    publicPath: '/',
     filename: '[name].bundle.js'
   },
   devtool: 'inline-cheap-module-source-map'
