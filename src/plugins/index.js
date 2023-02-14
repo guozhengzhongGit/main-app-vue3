@@ -1,0 +1,1 @@
+export { registerElementPlus } from './elementPlus';
